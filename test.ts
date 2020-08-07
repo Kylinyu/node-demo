@@ -28,28 +28,8 @@ module.exports = {
       test: /\.tsx?$/,
       use: 'ts-loader',
       exclude: /node_modules/
-    }, {
-      test: /\.js|jsx$/,
-      exclude: /node_modules/,
-      use: [
-        {
-          loader: 'babel-loader',
-          options: {
-            cacheDirectory: true,
-            babelrc: false,
-            presets: [
-                ["@babel/env", {
-                    "targets": {
-                        'browsers': ['Chrome >=59']
-                    },
-                    "modules":false,
-                    "loose":true
-              }],"@babel/react"
-            ],
-          }
-        }
-      ]
-    }]
+    },
+  ]
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.json', '.jsx'],
